@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo (Hackathon Submission)
 
-**Public Demo:** [https://cryptosentinel-ai.onrender.com](https://cryptosentinel-ai.onrender.com) ← **Replace with your deployed URL**
+**Public Demo:** [https://cryptosentinel-197h.onrender.com](https://cryptosentinel-197h.onrender.com)
 
 This is the **required publicly accessible demo** for Bitget AI Hackathon S1 Track 1.  
 It serves the full glassmorphic dashboard with live data from:
