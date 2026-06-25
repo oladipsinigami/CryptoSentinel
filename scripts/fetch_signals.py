@@ -858,16 +858,17 @@ def main():
     parser = argparse.ArgumentParser(description="CryptoSentinel Perception Signal Aggregator")
     parser.add_argument("--asset", default="BTC", help="Asset symbol (BTC, ETH, SOL)")
     parser.add_argument("--timeframe", default="1h", choices=["1m", "5m", "15m", "30m", "1h", "4h", "1d"], help="Timeframe / candle granularity")
-    parser.add_argument("--scan", action="store_true", help="Scan many coins, rank by conviction, save market_scan.json. Bot can then pick the most profitable.")
+    parser.add_argument("--scan", action="store_true", help="Scan many coins, rank by conviction, save market_scan.json.")
+    parser.add_argument("--limit", type=int, default=15, help="Number of coins to scan (default 15, use 50 for deeper scan)")
     args = parser.parse_args()
 
     if args.scan:
-        ranked = scan_market(top_n=15)
+        ranked = scan_market(top_n=args.limit)
         scan_path = os.path.join(ROOT_DIR, "market_scan.json")
         with open(scan_path, "w") as f:
             json.dump(ranked, f, indent=2)
         print(f"\n[OK] Market scan complete. Saved top {len(ranked)} to {scan_path}")
-        print("Top 5 by conviction:")
+        print(f"Top 5 by conviction (scanned {args.limit} coins):")
         for r in ranked[:5]:
             print(f"  {r['symbol']}: score={r['aggregate_score']:+.2f} {r['decision']}({r['confidence']}) vol=${r['volume_24h']/1e6:.1f}M")
         return

@@ -714,6 +714,13 @@ def _parse_trade_intent(text: str) -> dict:  # noqa: C901
         if _mystery:
             symbol_warning = f"\n\n⚠️ '{_mystery[0]}' is not a recognised symbol on Bitget — analysis defaulted to BTC."
 
+    # Extract explicit "top N" coin count (e.g. "top 50 coins", "analyze 20 coins")
+    top_n = None
+    m_topn = re.search(r'\btop\s*(\d+)\b|\b(\d+)\s*coins?\b|\banalyze\s*(\d+)\b', t)
+    if m_topn:
+        top_n = int(m_topn.group(1) or m_topn.group(2) or m_topn.group(3))
+        top_n = max(5, min(100, top_n))  # clamp 5–100
+
     return {
         "action": action,
         "side": side,
@@ -724,6 +731,7 @@ def _parse_trade_intent(text: str) -> dict:  # noqa: C901
         "leverage": leverage,
         "strategies": strategies,
         "symbol_warning": symbol_warning,
+        "top_n": top_n,
         "original_text": text
     }
 
@@ -1137,8 +1145,21 @@ def handle_nl_command(command_text: str):
             result = _execute_intelligent_trade(intent, text)
             return {"ok": True, "message": result, "action": "scan_trade"}
         else:
-            # Simple overview / scan overview
+            # If user asked for 'top N coins', trigger a live fresh scan first
+            top_n = intent.get("top_n")
+            if top_n:
+                py = sys.executable
+                scan_script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fetch_signals.py")
+                try:
+                    subprocess.run(
+                        [py, scan_script, "--scan", "--limit", str(top_n)],
+                        timeout=90, capture_output=True, cwd=WORKSPACE_DIR
+                    )
+                except Exception:
+                    pass  # fall through to cached scan if subprocess fails
             data, msg = _get_market_overview()
+            if top_n:
+                msg = f"🔍 Scanned top {top_n} coins live.\n\n" + msg
             return {"ok": True, "message": msg, "action": "overview", "data": data}
 
     # 3. execute_trade action
