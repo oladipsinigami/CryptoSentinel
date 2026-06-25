@@ -1,0 +1,146 @@
+{
+  "EMA Cross": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "SMA Cross": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Supertrend": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "ADX Trend Strength": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "MACD Momentum": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "RSI Momentum": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Stochastic Momentum": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Rate of Change (ROC)": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Bollinger Band Reversion": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "RSI Reversion": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Z-Score Reversion": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Donchian Channel Breakout": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "ATR Breakout": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Range Breakout": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Bollinger Squeeze": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Keltner Expansion": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "ATR Expansion": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "OBV": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "VWAP": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Volume Spike Detection": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Order Blocks": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "Fair Value Gaps": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  },
+  "BOS & CHOCH": {
+    "wins": 2,
+    "losses": 0,
+    "pnl": 27.747842284679702,
+    "total_trades": 2
+  },
+  "Liquidity Sweeps": {
+    "wins": 0,
+    "losses": 0,
+    "pnl": 0.0,
+    "total_trades": 0
+  }
+}

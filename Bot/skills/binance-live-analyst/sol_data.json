@@ -1,0 +1,10 @@
+{
+  "fetch_time_utc": "2026-06-06T17:26:08.519469+00:00",
+  "symbol": null,
+  "interval": "1h",
+  "error": "Symbol 'SOLUSDT' not found on Binance: Network error connecting to Binance: [Errno 11001] getaddrinfo failed",
+  "ticker": null,
+  "candles": null,
+  "order_book": null,
+  "recent_trades": null
+}

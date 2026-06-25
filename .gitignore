@@ -1,0 +1,86 @@
+# Secrets and credentials - NEVER commit these
+.env
+.env.*
+*.env
+**/.env
+**/*.env
+
+# Bitget specific
+.env.bitget
+bitget_keys.txt
+api_keys.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Project specific sensitive
+# NOTE: portfolio_state.json, backtest_log.csv, report.xlsx are intentionally
+# included in the repo as hackathon verifiable evidence (Track 1 requirement).
+latest_signals.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+auto_runner.log
+
+# Temporary
+*.tmp
+*.temp
+scratch/
+
+# Global IDE skills (not part of this project)
+skills/pptx/
+skills/xlsx/
+skills/slack-gif-creator/
+skills/theme-factory/
+skills/web-artifacts-builder/
+skills/webapp-testing/
+skills/algorithmic-art/
+
+# Large data/cache files not needed for review
+sol_data.json
+btc_7d.json
+market_scan.json
+utils/symbol_cache.json
+network.db
+
+# Internal debug/analysis reports (not submission materials)
+DEBUG_ANALYSIS_REPORT.md
+ROOT_CAUSE_NETWORK_ERROR_REPORT.md
+SESSION_CRITICAL_ANALYSIS.md
+BUG_REPORT.md
+FILE_NAME

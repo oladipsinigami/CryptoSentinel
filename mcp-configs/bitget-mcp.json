@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "bitget": {
+      "command": "npx",
+      "args": ["-y", "bitget-mcp-server"],
+      "env": {
+        "BITGET_API_KEY": "REPLACE_WITH_YOUR_BITGET_API_KEY",
+        "BITGET_SECRET_KEY": "REPLACE_WITH_YOUR_BITGET_SECRET_KEY",
+        "BITGET_PASSPHRASE": "REPLACE_WITH_YOUR_BITGET_PASSPHRASE"
+      }
+    }
+  }
+}

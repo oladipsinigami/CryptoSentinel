@@ -1,0 +1,10 @@
+network:
+  name: Bot
+  host: localhost
+  port: 8570
+  initialized: true
+  created_by_version: 0.9.3.post20
+agents: []
+studio:
+  port: 8055
+  auto_open_browser: true

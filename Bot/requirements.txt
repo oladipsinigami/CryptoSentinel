@@ -1,0 +1,9 @@
+# CryptoSentinel AI — Dependencies
+# Core
+openpyxl>=3.1.0
+
+# Official Bitget Skill Hub technical-analysis library
+# Same files as packages/bitget-skill-hub/skills/technical-analysis/src/
+# Required by kline_indicator_utils.py and kline_indicators.py
+pandas>=2.0.0
+numpy>=1.24.0
